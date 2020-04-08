@@ -1,26 +1,20 @@
-  function init()
-  m.top.observeField("focusedChild", "OnFocusedChild")
-  m.myIniciar=m.top.findNode("myIniciar")
-  m.myIngresa=m.top.findNode("myIngresa")
-  m.myRectangle=m.top.findNode("myRectangle")
-  m.myInput=m.top.findNode("myInput")
-  m.mySiguiente=m.top.findNode("mySiguiente")
-  m.myCancelar=m.top.findNode("myCancelar")
-  m.frame=m.top.findNode("frame")
-  m.bg=m.top.findNode("bg")
-  m.inputText=m.top.findNode("inputText")
+function init()
+    m.top.observeField("focusedChild", "OnFocusedChild")
+    m.myIniciar=m.top.findNode("myIniciar")
+    m.myIngresa=m.top.findNode("myIngresa")
+    m.myRectangle=m.top.findNode("myRectangle")
+    m.myInput=m.top.findNode("myInput")
+    m.mySiguiente=m.top.findNode("mySiguiente")
+    m.myCancelar=m.top.findNode("myCancelar")
+    
+    m.myIniciar.font.size=40
 
-  m.myIniciar.font.size=40
+    bTRect=m.myRectangle.boundingRect()
+    m.top.heightComponent=bTRect.height
 
-  bTRect=m.myRectangle.boundingRect()
-  m.top.heightComponent=bTRect.height
-
-  m.focusArray = [m.myInput, m.mySiguiente, m.myCancelar]
-  m.top.currentFocus = 0
-  m.focusArray[m.top.currentFocus].focused = true
- 
-
-  end function
+    m.focusArray = [m.myInput, m.mySiguiente, m.myCancelar]
+    m.top.currentFocus = 0
+end function
 
   function sizeComponent()
   m.myIniciar.width=m.top.widthComponent
@@ -53,6 +47,9 @@ function onKeyEvent(key as string, press as boolean) as boolean
                 m.focusArray[m.top.currentFocus].focused = true
             end if
             return true
+        else if key = "left" then
+            m.focusArray[m.top.currentFocus].focused = false
+            return false
         end if
     end if
     return false

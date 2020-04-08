@@ -3,16 +3,20 @@ sub init()
     m.buttonText = m.top.findNode("buttonText")
     m.frame = m.top.findNode("frame")
     m.bg = m.top.findNode("bg")
+
 end sub
 
 
 sub onFrameChange()
 print m.top.frameWidth
-m.mainRectangle.width=m.top.frameWidth
 m.frame.width=m.top.frameWidth
 m.bg.width=m.top.frameWidth-6
 m.buttonText.width=m.bg.width
-print m.top.frameColor
+
+m.frame.height=m.top.frameHeight
+m.bg.height=m.top.frameHeight-6
+m.buttonText.height=m.frame.height
+
 end sub
 
 sub onFocusChange()

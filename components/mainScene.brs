@@ -11,6 +11,8 @@
     centerx = (1280 - bTRect.width) / 2
     m.LayoutGroup.translation = [centerx, 120]
 
+    m.teclados.widthComponent=m.myRectangle.width
+    m.myRectangle.height=m.teclados.heightComponent
     m.iniciarSesion.widthComponent=m.myRectangle2.width
     m.myRectangle2.height=m.iniciarSesion.heightComponent
 
@@ -21,16 +23,16 @@
   handled = false
   print press
   if press then
-    if (key = "left") then
+    if (key = "left" ) then
         ? key
        m.teclados.setFocus(true)
-       m.myRectangle.visible=true
-       m.myRectangle2.visible=false
+       m.teclados.focus=true
+       m.iniciarSesion.setFocus(false)
+       
     else if (key = "right") then
         ? key
           m.iniciarSesion.setFocus(true)
-          m.myRectangle.visible=false
-          m.myRectangle2.visible=true
+          m.teclados.setFocus(false)
           handled = true
     end if
   end if

@@ -2,11 +2,21 @@
 
 <component name = "teclados" extends = "Group" >
 <script type="text/brightscript" uri="pkg:/components/teclados/teclados.brs" />
+<interface>
+		<field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
+        <field id="heightComponent" type="integer" />
+        <field id="focus" type="boolean" OnChange="asignaFocus" />
+</interface>
 <children>
-      <Label
-    id="myInformation"
-    text="Teclado"
-    
+    <Rectangle id="myRectangle" >
+    <Label
+    id="myIniciar"
+    text="TECLADO-Logoclarovideo"
+    horizAlign = "left"
     />
+    <ControllerKeyboard id="myControllerKeyboard" translation="[0,90]"/>
+    <Abecedario id="myAbecedario" translation="[0,150]"/>
+    <Numerico id="myNumerico" translation="[0,150]"/>
+</Rectangle>
 </children>
 </component>

@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "Abecedario" extends = "Group" >
+<script type="text/brightscript" uri="pkg:/components/Abecedario/Abecedario.brs" />
+<interface>
+        <!-- <field id="lostFocus" type="boolean"/> -->
+</interface>
+<children>
+    <miniKeyboard width="600"/>
+</children>
+</component>
