@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <component name="CButton" extends="Group" >
     <interface>
-        <field id="frameColor" type="string" alias="frame.color" value="#333333" />
-        <field id="bgColor" type="string" alias="bg.color" value="#333333" />
+        <field id="frameColor" type="string" alias="frame.color" value="#ffffff" onChange="actualizaOriginalColor"/>
+        <field id="bgColor" type="string" alias="bg.color"  value="#333333" />
+        <field id="focusColorOriginal" type="string" value="#333333" />
+        <field id="frameWidth" type="integer" alias="frame.width" onChange="onFrameChange"/>
         <field id="text" type="string" alwaysNotify="true" alias="buttonText.text" value="text" onChange="onButtonChange" />
         <field id="textSize" type="integer" alwaysNotify="true" value="16" onChange="onButtonSizeChange" />
         <field id="focused" type="boolean" alwaysNotify="true" onChange="onFocusChange" />
+        <field id="leftCentred" type="boolean" alwaysNotify="true" value="true" onChange="onCentredChange"/>
     </interface>
 
     <script type="text/brightscript" uri="pkg:/components/CButton/CButton.brs" />
 
     <children>
-        <Rectangle id="mainRectangle" color="#808080" opacity="1.0">
-            <Rectangle id="frame" height="60" width="140" visible="false">
-                <Rectangle id="bg" height="54" width="134" translation="[3,3]" />
+        <Rectangle id="mainRectangle" opacity="1.0">
+            <Rectangle id="frame" height="60" visible="true">
+                <Rectangle id="bg" height="54" translation="[3,3]" />
             </Rectangle>
-            <Poster id="buttonIcon"/>
-            <Label id="buttonText" color="#ffffffff" vertAlign="center" horizAlign="center" />
+            <Label id="buttonText" height="54" color="#ffffffff" vertAlign="center" />
         </Rectangle>
     </children>
 </component>

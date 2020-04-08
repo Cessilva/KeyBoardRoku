@@ -1,6 +1,10 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
 
 <component name = "iniciarSesion" extends = "Group" >
+<interface>
+		<field id="currentFocus" type="integer" />
+		<field id="buttonSelected" type="string" />
+</interface>
 <script type="text/brightscript" uri="pkg:/components/iniciarSesion/iniciarSesion.brs" />
 <interface>
 		<field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
@@ -19,13 +23,11 @@
     horizAlign = "left"
     translation="[0,90]"
     />
-    <Rectangle id="myInput" color="#4c4c4c" opacity="1.0" translation="[0,160]">
-            <Rectangle id="frame" height="60"  visible="true">
-                <Rectangle id="bg" height="54"  translation="[3,3]" color="#4c4c4c"/>
-            </Rectangle>
-            <Label id="inputText" height="54" color="#ffffffff" text="   Escribe tu correo electronico" horizAlign="left" vertAlign = "center"/>
-    </Rectangle>
-
+    <LayoutGroup id="LayoutGroup" layoutDirection="vert"  addItemSpacingAfterChild="true" itemSpacings="[20]" translation="[0,150]">
+				<CButton id="myInput" text="  Correo Electronico" textSize="23" frameColor="#ffffff" focusColorOriginal="#ffffff" bgColor="#333333"/>
+				<CButton id="mySiguiente" text="SIGUIENTE" textSize="20" leftCentred="false" frameColor="#a2282a" focusColorOriginal="#a2282a" bgColor="#a2282a"/>
+				<CButton id="myCancelar" text="CANCELAR" textSize="20" leftCentred="false" frameColor="#7e7e7e" focusColorOriginal="#7e7e7e" bgColor="#7e7e7e"/>
+	</LayoutGroup>
 </Rectangle>
 </children>
 </component>
