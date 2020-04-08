@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name = "iniciarSesion" extends = "Group" >
+<script type="text/brightscript" uri="pkg:/components/iniciarSesion/iniciarSesion.brs" />
+<interface>
+		<field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
+        <field id="heightComponent" type="integer" alias="myRectangle.width"/>
+</interface>
+<children>
+<Rectangle id="myRectangle" >
+    <Label
+    id="myIniciar"
+    text="Iniciar sesion"
+    horizAlign = "left"
+    />
+    <Label
+    id="myIngresa"
+    text="Ingresa tu correo electronico"
+    horizAlign = "left"
+    translation="[0,90]"
+    />
+    <Rectangle id="myInput" color="#4c4c4c" opacity="1.0" translation="[0,160]">
+            <Rectangle id="frame" height="60"  visible="true">
+                <Rectangle id="bg" height="54"  translation="[3,3]" color="#4c4c4c"/>
+            </Rectangle>
+            <Label id="inputText" height="54" color="#ffffffff" text="   Escribe tu correo electronico" horizAlign="left" vertAlign = "center"/>
+    </Rectangle>
+
+</Rectangle>
+</children>
+</component>
