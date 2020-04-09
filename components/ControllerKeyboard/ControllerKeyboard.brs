@@ -1,5 +1,6 @@
   function init()
   m.top.observeField("focusedChild", "OnFocusedChild")
+
   m.abecedario=m.top.findNode("abecedario")
   m.numerico=m.top.findNode("numerico")
   m.borrar=m.top.findNode("borrar")
@@ -7,6 +8,7 @@
 
   m.focusArray = [m.abecedario,m.numerico, m.borrar, m.vaciar]
   m.top.currentFocus = 0
+
   end function
 
 

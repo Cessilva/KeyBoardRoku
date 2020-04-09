@@ -16,7 +16,7 @@
     m.iniciarSesion.widthComponent=m.myRectangle2.width
     m.myRectangle2.height=m.iniciarSesion.heightComponent
 
-    m.teclados.setFocus(true)
+    m.iniciarSesion.setFocus(true)
   end function
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
@@ -26,14 +26,12 @@
     if (key = "left" ) then
         ? key
        m.teclados.setFocus(true)
-       m.teclados.focus=true
        m.iniciarSesion.setFocus(false)
-       
-    else if (key = "right") then
+    else if (key = "right" ) then
         ? key
           m.iniciarSesion.setFocus(true)
           m.teclados.setFocus(false)
-          handled = true
+          handled=true
     end if
   end if
   return handled
