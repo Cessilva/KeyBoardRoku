@@ -5,6 +5,6 @@
         <!-- <field id="lostFocus" type="boolean"/> -->
 </interface>
 <children>
-    <miniKeyboard width="600"/>
+    <miniKeyboard />
 </children>
 </component>

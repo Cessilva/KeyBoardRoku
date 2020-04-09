@@ -2,9 +2,21 @@
 <component name = "Numerico" extends = "Group" >
 <script type="text/brightscript" uri="pkg:/components/Numerico/Numerico.brs" />
 <interface>
-        <!-- <field id="lostFocus" type="boolean"/> -->
+    <field alias="myRowList.rowItemSelected" type="intarray" id="rowItemSelected" alwaysnotify="true"/>
+    <field onChange="OnItemFocused" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
+    <field type="node" id="focusedContent"/>
+    <!-- <field alias="myRowList.rowItemSize" type="intarray" id="rowItemSize" alwaysnotify="true"/> -->
 </interface>
 <children>
-    <PinPad width="600"/>
+    <RowList id="myRowList" 
+    rowFocusAnimationStyle="floatingFocus" 
+    vertFocusAnimationStyle="floatingFocus" 
+    drawFocusFeedback="false" 
+    rowItemSpacing="[[5,0]]" 
+    showRowLabel="[false ]" 
+    rowItemSize="[[110, 65],[110, 65],[110, 65],[165, 65]]" 
+    itemSize="[400,65]" 
+    itemComponentName="BotonNumerico" 
+    numRows="4" />
 </children>
 </component>

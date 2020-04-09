@@ -14,7 +14,6 @@
 
   sub onFocusedChild()
     if m.top.isInFocusChain() and not m.myControllerKeyboard.hasFocus() then
-      print "entreeeee"
         m.myControllerKeyboard.setFocus(true)
     end if
 end sub
@@ -26,20 +25,22 @@ end sub
   if press then
     if (key = "OK" ) then
       if  m.myControllerKeyboard.currentFocus=0 then
+      m.myControllerKeyboard.setFocus(false)
+      m.myAbecedario.setFocus(true)
        m.myAbecedario.visible=true
        m.myNumerico.visible=false
       else if m.myControllerKeyboard.currentFocus=1 then
         m.myAbecedario.visible=false
         m.myNumerico.visible=true
+        m.myNumerico.setFocus(true)
+        m.myControllerKeyboard.setFocus(false)
       end if
     else if (key ="down")
-      if  m.myControllerKeyboard.currentFocus=0 then
+      if  (m.myControllerKeyboard.currentFocus=0 and (not m.myAbecedario.hasFocus())) then
        m.myAbecedario.setFocus(true)
-      else if m.myControllerKeyboard.currentFocus=1 then
+      else if (m.myControllerKeyboard.currentFocus=1 and (not m.myNumerico.hasFocus())) then
         m.myNumerico.setFocus(true)
       end if
-    else if (key="up" ) then 
-       m.myControllerKeyboard.setFocus(true)
     end if
   end if
   return handled
