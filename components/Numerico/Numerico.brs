@@ -73,7 +73,7 @@ end sub
 
 sub OnItemFocused()
     itemFocused = m.top.itemFocused
-    print m.myRowList.content.getChild(itemFocused[0]).getChild(itemFocused[1])
+    'print m.myRowList.content.getChild(itemFocused[0]).getChild(itemFocused[1])
     if itemFocused.count() = 2 then
         focusedContent = m.myRowList.content.getChild(itemFocused[0]).getChild(itemFocused[1])
         if focusedContent <> invalid then

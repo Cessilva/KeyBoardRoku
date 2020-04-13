@@ -3,13 +3,12 @@
 
   m.myRectangle=m.top.findNode("myRectangle")
   m.myControllerKeyboard=m.top.findNode("myControllerKeyboard")
-  m.myAbecedario=m.top.findNode("myAbecedario")
-  m.myNumerico=m.top.findNode("myNumerico")
-  m.myAbecedario.visible=true
-  m.myNumerico.visible=false
+  m.myContenedorAlfaNumerico=m.top.findNode("myContenedorAlfaNumerico")
 
   bTRect=m.myRectangle.boundingRect()
   m.top.heightComponent=bTRect.height
+
+  'm.myControllerKeyboard.tieneFocus=true
   end function
 
   sub onFocusedChild()
@@ -17,30 +16,30 @@
         m.myControllerKeyboard.setFocus(true)
     end if
 end sub
-  
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
-  print press
+
   if press then
     if (key = "OK" ) then
+    ? "Voy a escoger mi teclado"
       if  m.myControllerKeyboard.currentFocus=0 then
-      m.myControllerKeyboard.setFocus(false)
-      m.myAbecedario.setFocus(true)
-       m.myAbecedario.visible=true
-       m.myNumerico.visible=false
+          m.myContenedorAlfaNumerico.elementFocused=0
       else if m.myControllerKeyboard.currentFocus=1 then
-        m.myAbecedario.visible=false
-        m.myNumerico.visible=true
-        m.myNumerico.setFocus(true)
-        m.myControllerKeyboard.setFocus(false)
+          m.myContenedorAlfaNumerico.elementFocused=1
       end if
-    else if (key ="down")
-      if  (m.myControllerKeyboard.currentFocus=0 and (not m.myAbecedario.hasFocus())) then
-       m.myAbecedario.setFocus(true)
-      else if (m.myControllerKeyboard.currentFocus=1 and (not m.myNumerico.hasFocus())) then
-        m.myNumerico.setFocus(true)
-      end if
+
+    else if (key="down" )then 
+    ? "Voy a ir al teclado que elegi"
+            m.myContenedorAlfaNumerico.setFocus(true)
+            m.myControllerKeyboard.setFocus(false)
+            'm.myControllerKeyboard.tieneFocus=false
+    else if (key="up")then 
+    ? "Voy a regresar a elegir teclado"
+          'm.myControllerKeyboard.tieneFocus=true
+          m.myControllerKeyboard.setFocus(true)
+          m.myContenedorAlfaNumerico.setFocus(false)
+         
     end if
   end if
   return handled

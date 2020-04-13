@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "ContenedorAlfaNumerico" extends = "Group" >
+<script type="text/brightscript" uri="pkg:/components/ContenedorAlfaNumerico/ContenedorAlfaNumerico.brs" />
+<interface>
+        <field id="elementFocused" type="integer" OnChange="OnFocusedChild"/>
+</interface>
+<children>
+    <Numerico id="myNumerico" />
+    <Abecedario id="myAbecedario"/>
+</children>
+</component>

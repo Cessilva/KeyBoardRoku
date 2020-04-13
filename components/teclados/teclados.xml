@@ -8,11 +8,9 @@
 </interface>
 <children>
     <Rectangle id="myRectangle" >
-    <Label id="myIniciar" text="TECLADO-Logoclarovideo" horizAlign = "left"/>
-    <ControllerKeyboard id="myControllerKeyboard" translation="[0,90]"/>
-    <Abecedario id="myAbecedario" translation="[0,150]"/>
-    <ContenedorNumerico id="myContenedorNumerico" translation="[0,150]">
-    <!-- <Numerico id="myNumerico" /> -->
+        <Label id="myIniciar" text="TECLADO-Logoclarovideo" horizAlign = "left"/>
+        <ControllerKeyboard id="myControllerKeyboard" translation="[0,90]"/>
+        <ContenedorAlfaNumerico id="myContenedorAlfaNumerico" translation="[0,150]"/>
     </Rectangle>
 </children>
 </component>

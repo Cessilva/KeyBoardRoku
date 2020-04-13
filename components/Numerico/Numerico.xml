@@ -4,8 +4,8 @@
 <interface>
     <field alias="myRowList.rowItemSelected" type="intarray" id="rowItemSelected" alwaysnotify="true"/>
     <field onChange="OnItemFocused" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
+    <field alias="myRowList.rowItemSize" type="intarray" id="rowItemSize" alwaysnotify="true"/>
     <field type="node" id="focusedContent"/>
-    <!-- <field alias="myRowList.rowItemSize" type="intarray" id="rowItemSize" alwaysnotify="true"/> -->
 </interface>
 <children>
     <RowList id="myRowList" 
@@ -16,7 +16,7 @@
     showRowLabel="[false ]" 
     rowItemSize="[[110, 65],[110, 65],[110, 65],[165, 65]]" 
     itemSize="[400,65]" 
-    itemComponentName="BotonNumerico" 
+    itemComponentName="BotonNumerico"
     numRows="4" />
 </children>
 </component>

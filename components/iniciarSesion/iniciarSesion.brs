@@ -34,22 +34,25 @@ end sub
 function onKeyEvent(key as string, press as boolean) as boolean
     if press then
         if key = "up" then
+        ? "Voy hacia arriba de iniciar sesion"
             if m.top.currentFocus <> 0 then
                 m.focusArray[m.top.currentFocus].focused = false
                 m.top.currentFocus --
                 m.focusArray[m.top.currentFocus].focused = true
             end if
-            return true
+            ' return true
         else if key = "down" then
+        ? "Voy hacia abajo de iniciar sesion"
             if m.top.currentFocus <> 2 then
                 m.focusArray[m.top.currentFocus].focused = false
                 m.top.currentFocus ++
                 m.focusArray[m.top.currentFocus].focused = true
             end if
-            return true
+            ' return true
         else if key = "left" then
+        ? "Voy hacia teclados y apago mi foco"
             m.focusArray[m.top.currentFocus].focused = false
-            return false
+            'return false
         end if
     end if
     return false

@@ -21,17 +21,16 @@
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
-  print press
   if press then
     if (key = "left" ) then
-        ? key
+        ? "Voy a teclados"
        m.teclados.setFocus(true)
        m.iniciarSesion.setFocus(false)
     else if (key = "right" ) then
-        ? key
+        ? "Voy a iniciar Sesion"
           m.iniciarSesion.setFocus(true)
           m.teclados.setFocus(false)
-          handled=true
+          'handled=true
     end if
   end if
   return handled

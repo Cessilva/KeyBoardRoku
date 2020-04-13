@@ -8,7 +8,6 @@ end sub
 
 
 sub onFrameChange()
-print m.top.frameWidth
 m.frame.width=m.top.frameWidth
 m.bg.width=m.top.frameWidth-6
 m.buttonText.width=m.bg.width
