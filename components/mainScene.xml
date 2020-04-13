@@ -5,6 +5,8 @@
 <LayoutGroup id="LayoutGroup" layoutDirection="horiz" addItemSpacingAfterChild="true"  itemSpacings="[50]" >
 <Rectangle id="myRectangle" color="#000000"  width="600" height="60">
     <teclados id="teclados"/>	
+    <ContenedorAlfaNumerico id="myNumerico"/> 
+    <!-- <ContenedorAlfaNumerico id="myContenedorAlfaNumerico""/> -->
 </Rectangle>
 <Rectangle id="myRectangle2" color="#000000"  width="500" height="60">
     <iniciarSesion id="iniciarSesion"/>	

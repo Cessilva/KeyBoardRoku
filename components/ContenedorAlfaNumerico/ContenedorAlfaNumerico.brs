@@ -3,17 +3,22 @@ function init()
     m.myAbecedario=m.top.findNode("myAbecedario")
     m.myNumerico.visible=false
     m.myAbecedario.visible=true
+    m.myNumerico.observeField("numero","actualizaContenido")
   end function
+  
+  sub actualizaContenido()
+    m.top.contenido=m.myNumerico.numero
+  end sub
 
   sub OnFocusedChild()
-  ?"Eligieron un teclado, estoy en cotenedor alfanumerico"
-    if m.top.elementFocused=0 then
-   m.myNumerico.visible=false
-   m.myAbecedario.visible=true
-   m.myAbecedario.setFocus(true)
-   else if m.top.elementFocused=1 then
-   m.myNumerico.visible=true
-   m.myAbecedario.visible=false
-   m.myNumerico.setFocus(true)
-   end if 
+   ?"Eligieron un teclado, estoy en cotenedor alfanumerico"
+  if m.top.elementFocused=0 then
+    m.myNumerico.visible=false
+    m.myAbecedario.visible=true
+    m.myAbecedario.setFocus(true)
+  else if m.top.elementFocused=1 then
+    m.myNumerico.visible=true
+    m.myAbecedario.visible=false
+    m.myNumerico.setFocus(true)
+  end if 
   end sub

@@ -6,6 +6,7 @@
 		<field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
         <field id="heightComponent" type="integer"/>
         <field id="currentFocus" type="integer" />
+        <field id="contentInput" type="string" OnChange="cambiaContenidoInput"/>
 </interface>
 <children>
 <Rectangle id="myRectangle" >

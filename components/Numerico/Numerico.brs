@@ -96,3 +96,18 @@ function parseContent(list As Object)
     end for
     return ContentNode_object
 end function
+
+  function onKeyEvent(key as String, press as Boolean) as Boolean
+  handled = false
+  print "soy el press"
+  print press
+  if (not press) then
+  ?"Estoy en el ok "
+    if (key = "OK" ) then
+        ?"Estoy en el ok "
+       m.top.numero=m.top.focusedContent.title
+       print m.top.focusedContent.title
+    end if
+  end if
+  return handled
+end function

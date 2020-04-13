@@ -5,12 +5,12 @@
 <interface>
 		<field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
         <field id="heightComponent" type="integer" />
+        <field id="botonEscogido" type="integer"/>
 </interface>
 <children>
     <Rectangle id="myRectangle" >
         <Label id="myIniciar" text="TECLADO-Logoclarovideo" horizAlign = "left"/>
         <ControllerKeyboard id="myControllerKeyboard" translation="[0,90]"/>
-        <ContenedorAlfaNumerico id="myContenedorAlfaNumerico" translation="[0,150]"/>
     </Rectangle>
 </children>
 </component>

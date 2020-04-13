@@ -3,9 +3,10 @@
 <script type="text/brightscript" uri="pkg:/components/ContenedorAlfaNumerico/ContenedorAlfaNumerico.brs" />
 <interface>
         <field id="elementFocused" type="integer" OnChange="OnFocusedChild"/>
+        <field id="contenido" type ="string"/>
 </interface>
 <children>
-    <Numerico id="myNumerico" />
-    <Abecedario id="myAbecedario"/>
+    <Numerico id="myNumerico"  translation="[0,150]"/>
+    <Abecedario id="myAbecedario"  translation="[0,150]"/>
 </children>
 </component>
