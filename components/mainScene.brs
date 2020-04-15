@@ -1,6 +1,7 @@
   function init()
   '1280 x 720 HD 
   'Declaracion de variables
+   m.top.backgroundURI = "pkg:/images/negro.png"
     m.teclados=m.top.findNode("teclados")
     m.iniciarSesion=m.top.findNode("iniciarSesion")
     m.myContenedorAlfaNumerico=m.top.findNode("myContenedorAlfaNumerico")
