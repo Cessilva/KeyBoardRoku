@@ -15,7 +15,7 @@
     drawFocusFeedback="false" 
     rowItemSpacing="[[5,0]]" 
     showRowLabel="[false ]" 
-    rowItemSize="[[110, 65],[110, 65],[110, 65],[165, 65]]" 
+    rowItemSize="[[110, 65],[110, 65],[110, 65],[168, 65]]" 
     itemSize="[400,65]" 
     itemComponentName="BotonNumerico"
     numRows="4" />

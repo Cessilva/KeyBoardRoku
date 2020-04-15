@@ -15,6 +15,13 @@ sub showcontent()
   m.buttonIcon.uri = itemcontent.SDPosterUrl
   m.buttonText.text= itemcontent.title
 end sub
+sub onWidthChange()
+  width = m.top.width
+  m.buttonText.width= width
+  m.mainRectangle.width=width
+  m.frame.width=width
+  m.bg.width=width-6
+end sub
 
 sub onFocusChange()
     ?"onFocusChangeBotonNumerico"

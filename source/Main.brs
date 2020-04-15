@@ -1,4 +1,5 @@
 sub Main()
+    m.top.backgroundURI = "pkg:/images/negro.png"
     print "in showChannelSGScreen"
     screen = CreateObject("roSGScreen")
     m.port = CreateObject("roMessagePort")

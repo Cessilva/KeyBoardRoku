@@ -1,5 +1,7 @@
 function init()
     m.myRowList=m.top.findNode("myRowList")
+    bRect=m.myRowList.boundingRect()
+    m.myRowList.translation=[(300-bRect.width)/2,0]
     udt=[
       {Title:"1"
       SDPosterUrl:"pkg:/images/transparente.png"
