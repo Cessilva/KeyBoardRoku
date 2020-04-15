@@ -180,12 +180,21 @@ end function
     if (key = "OK" ) then
         if m.top.focusedContent.title="may" then
           m.top.focusedContent.title=m.top.focusedContent.TitleSeason
+          m.myRowList.itemComponentName="BotonLetraMayus"
         else
             m.top.letra=m.top.focusedContent.title
        end if 
     else if(key = "down" ) then
-        'm.AbecedarioAnexo.setFocus(true)
-    end if
+
+            m.AbecedarioAnexo.setFocus(true)
+            print "Voy al abecedario"
+
+    else if(key = "up" ) then
+        if m.AbecedarioAnexo.hasFocus() then
+            m.myRowList.setFocus(true)
+            print "entre aqui"
+        end if
+end if
   end if
   return handled
 end function

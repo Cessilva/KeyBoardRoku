@@ -9,7 +9,7 @@
 </interface>
 <children>
     <Rectangle id="myRectangle" >
-        <Label id="myIniciar" text="TECLADO-Logoclarovideo" horizAlign = "left"/>
+        <Poster id="myIniciar" width="300" height="80" translation="[-30,0]" uri="pkg:/images/claro-video.png"/>
         <ControllerKeyboard id="myControllerKeyboard" translation="[0,90]"/>
     </Rectangle>
 </children>
