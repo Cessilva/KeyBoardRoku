@@ -26,6 +26,12 @@ end sub
       else if m.myControllerKeyboard.currentFocus=1 then
           m.top.botonEscogido=1
           ? "Escogi el teclado numerico"
+      else if m.myControllerKeyboard.currentFocus=2 then
+        m.top.botonEscogido=2
+        ? "Escogi el boton borrar"
+      else if m.myControllerKeyboard.currentFocus=3 then
+          m.top.botonEscogido=3
+          ? "Escogi el boton vaciar"
       end if
     end if
   end if

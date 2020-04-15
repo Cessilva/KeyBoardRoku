@@ -32,9 +32,12 @@ sub onFocusedChild()
 end sub
 
 sub cambiaContenidoInput()
-    if m.myInput.text="  Correo Electronico" then
+    if (m.myInput.text="  Correo Electronico" or m.top.contentInput="vaciar") then
         m.myInput.text=""
-    else 
+    else if m.top.contentInput="borrar" then
+    size=len(m.myInput.text)
+    m.myInput.text=Left(m.myInput.text,size-1)
+    else
         m.myInput.text=m.myInput.text+m.top.contentInput
     end if 
 end sub

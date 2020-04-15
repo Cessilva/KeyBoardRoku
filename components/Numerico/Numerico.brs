@@ -106,7 +106,12 @@ end function
   if (not press) then
     if (key = "OK" ) then
         ?"Estoy en el ok de teclado numerico "
+       
+       if m.top.focusedContent.title="Borrar" then 
+       m.top.numero="borrar"
+       else
        m.top.numero=m.top.focusedContent.title
+       end if
     end if
   end if
   return handled

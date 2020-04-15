@@ -4,8 +4,8 @@
 <interface>
         <field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
         <!-- Este es el que dice cual escogio -->
-        <field id="elementFocused" type="integer" OnChange="OnFocusedChild"/>
-        <field id="contenido" type ="string"/>
+        <field id="elementFocused" type="integer" alwaysNotify="true" OnChange="OnFocusedChild"/>
+        <field id="contenido"  type ="string" alwaysNotify="true"/>
         <field id="quieroFocus" type ="boolean" OnChange="OnChange"/>
 </interface>
 <children>

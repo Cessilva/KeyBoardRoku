@@ -3,9 +3,9 @@
 <script type="text/brightscript" uri="pkg:/components/Abecedario/Abecedario.brs" />
 <interface>
     <field alias="myRowList.rowItemSelected" type="intarray" id="rowItemSelected" alwaysnotify="true"/>
-    <field onChange="OnItemFocused" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
+    <field onChange="OnItemFocused" alwaysnotify="true" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
     <field alias="myRowList.rowItemSize" type="intarray" id="rowItemSize" alwaysnotify="true"/>
-    <field id="letra" type="string" />
+    <field id="letra" type="string" alwaysnotify="true" />
     <field type="node" id="focusedContent"/>
 </interface>
 <children>
@@ -13,9 +13,9 @@
     rowFocusAnimationStyle="floatingFocus" 
     vertFocusAnimationStyle="floatingFocus" 
     drawFocusFeedback="false" 
-    rowItemSpacing="[[5,0],[5,0],[12,0]]" 
+    rowItemSpacing="[[5,0],[5,0],[12,0],[13,0]]" 
     showRowLabel="[false ]" 
-    rowItemSize="[[55.5, 55.5]]" 
+    rowItemSize="[[55.5, 55.5],[55.5, 55.5],[55.5, 55.5],[130,55.5]]" 
     itemSize="[600,65]" 
     itemComponentName="BotonLetra"
     numRows="3" />

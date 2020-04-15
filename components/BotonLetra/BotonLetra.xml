@@ -3,6 +3,7 @@
 <interface > 
       <field id="itemHasFocus" type="boolean"  onChange="onFocusChange" />
       <field id = "itemContent" type = "node"  onChange = "showcontent"/>
+      <field id="width" type="float" onChange="cambiaWidth"/>
   </interface>
 <script type = "text/brightscript" uri="pkg:/components/BotonLetra/BotonLetra.brs/"></script>
   <children >

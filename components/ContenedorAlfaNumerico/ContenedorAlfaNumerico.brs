@@ -6,6 +6,7 @@ function init()
 
     m.myNumerico.observeField("numero","actualizaContenidoNumero")
     m.myAbecedario.observeField("letra","actualizaContenidoLetra")
+    
   end function
 
   sub actualizaContenidoNumero()
@@ -39,5 +40,9 @@ function init()
     m.myNumerico.visible=true
     m.myAbecedario.visible=false
     m.myNumerico.setFocus(true)
+  else if m.top.elementFocused=2 then
+      m.top.contenido="borrar"
+    else if m.top.elementFocused=3 then
+      m.top.contenido="vaciar"
   end if 
   end sub

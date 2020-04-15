@@ -6,21 +6,12 @@
 		<field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
         <field id="heightComponent" type="integer"/>
         <field id="currentFocus" type="integer" />
-        <field id="contentInput" type="string" OnChange="cambiaContenidoInput"/>
+        <field id="contentInput"  type="string" alwaysnotify="true" OnChange="cambiaContenidoInput"/>
 </interface>
 <children>
 <Rectangle id="myRectangle" >
-    <Label
-    id="myIniciar"
-    text="Iniciar sesion"
-    horizAlign = "left"
-    />
-    <Label
-    id="myIngresa"
-    text="Ingresa tu correo electronico"
-    horizAlign = "left"
-    translation="[0,90]"
-    />
+    <Label id="myIniciar" text="Iniciar sesion" horizAlign = "left"/>
+    <Label id="myIngresa" text="Ingresa tu correo electronico" horizAlign = "left" translation="[0,90]"/>
     <LayoutGroup id="LayoutGroup" layoutDirection="vert"  addItemSpacingAfterChild="true" itemSpacings="[20]" translation="[0,150]">
 				<CButton id="myInput" text="  Correo Electronico" textSize="23" frameColor="#ffffff" focusColorOriginal="#ffffff" bgColor="#333333"/>
 				<CButton id="mySiguiente" text="SIGUIENTE" textSize="20" leftCentred="false" frameColor="#a2282a" focusColorOriginal="#a2282a" bgColor="#a2282a"/>

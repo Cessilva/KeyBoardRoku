@@ -123,6 +123,24 @@ function init()
       SDPosterUrl:"pkg:/images/transparente.png"
       }
       ]
+    ch=[
+      {Title:".com"
+      TitleSeason:".com"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:".net"
+      TitleSeason:".net"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:"@gmail.com"
+      TitleSeason:"@gmail.com"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:"@hotmail.com"
+      TitleSeason:"@hotmail.com"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      ]
     lista= [
         {
             Title: "De Q a P"
@@ -136,6 +154,11 @@ function init()
             Title: "Mayus a @"
             ContentList: ma
         }
+        {
+            Title: "Com a hotmail"
+            ContentList: ch
+        }
+
     ]
     content = parseContent(lista)
     m.myRowList.content= content
@@ -184,16 +207,16 @@ end function
         else
             m.top.letra=m.top.focusedContent.title
        end if 
-    else if(key = "down" ) then
+    ' else if(key = "down" ) then
 
-            m.AbecedarioAnexo.setFocus(true)
-            print "Voy al abecedario"
+    '         m.AbecedarioAnexo.setFocus(true)
+    '         print "Voy al abecedario"
 
-    else if(key = "up" ) then
-        if m.AbecedarioAnexo.hasFocus() then
-            m.myRowList.setFocus(true)
-            print "entre aqui"
-        end if
+    ' else if(key = "up" ) then
+    '     if m.AbecedarioAnexo.hasFocus() then
+    '         m.myRowList.setFocus(true)
+    '         print "entre aqui"
+    '     end if
 end if
   end if
   return handled

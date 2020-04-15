@@ -10,6 +10,15 @@ sub init()
     m.buttonIcon.translation = [centerx, centery]
 end sub
 
+sub cambiaWidth()
+width = m.top.width
+  m.buttonText.width= width
+  m.mainRectangle.width=width
+  m.frame.width=width
+  m.bg.width=width-6
+end sub 
+
+
 sub showcontent()
   itemcontent = m.top.itemContent
   m.buttonIcon.uri = itemcontent.SDPosterUrl

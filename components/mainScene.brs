@@ -22,7 +22,7 @@
     
     
     m.teclados.observeField("botonEscogido", "ButtonSelected")
-    m.myContenedorAlfaNumerico.observeField("contenido", "actualizaContenido")
+    'm.myContenedorAlfaNumerico.observeField("contenido", "actualizaContenido")
     m.iniciarSesion.setFocus(true)
   end function
 'Establece el teclado numerico o alfabetico
@@ -35,6 +35,8 @@
 'Rellena el input de iniciarSesion
   sub actualizaContenido()
     m.iniciarSesion.contentInput=m.myContenedorAlfaNumerico.contenido
+    ?"Actualizando contenido de inicia sesion"
+    print m.iniciarSesion.contentInput
   end sub 
 
 

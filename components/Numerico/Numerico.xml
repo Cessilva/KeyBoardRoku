@@ -3,9 +3,9 @@
 <script type="text/brightscript" uri="pkg:/components/Numerico/Numerico.brs" />
 <interface>
     <field alias="myRowList.rowItemSelected" type="intarray" id="rowItemSelected" alwaysnotify="true"/>
-    <field onChange="OnItemFocused" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
+    <field onChange="OnItemFocused" alwaysnotify="true" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
     <field alias="myRowList.rowItemSize" type="intarray" id="rowItemSize" alwaysnotify="true"/>
-    <field id="numero" type="string" />
+    <field id="numero" type="string" alwaysnotify="true" />
     <field type="node" id="focusedContent"/>
 </interface>
 <children>
