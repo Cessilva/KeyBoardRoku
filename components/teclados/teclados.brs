@@ -17,14 +17,15 @@ end sub
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
-
   if press then
     if (key = "OK" ) then
     ? "Voy a escoger mi teclado"
       if  m.myControllerKeyboard.currentFocus=0 then
           m.top.botonEscogido=0
+          ? "Escogi el teclado alfabetico"
       else if m.myControllerKeyboard.currentFocus=1 then
           m.top.botonEscogido=1
+          ? "Escogi el teclado numerico"
       end if
     end if
   end if

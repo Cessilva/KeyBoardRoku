@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "BotonLetra" extends = "Group"  >
+<interface > 
+      <field id="itemHasFocus" type="boolean"  onChange="onFocusChange" />
+      <field id = "itemContent" type = "node"  onChange = "showcontent"/>
+  </interface>
+<script type = "text/brightscript" uri="pkg:/components/BotonLetra/BotonLetra.brs/"></script>
+  <children >
+        <Rectangle 
+        id="mainRectangle"  
+        width="55"
+        height="55">       
+        <Rectangle 
+        id="frame" 
+        color="#000000"
+        width="55"
+        height="55"
+        visible="true">
+        <Rectangle 
+        id="bg"
+        width="49"
+        height="49"
+        color="#000000" 
+        translation="[3,3]"
+        >
+        </Rectangle>
+        </Rectangle> 
+        <Poster 
+        id="buttonIcon"
+        width="60"
+        height="40" />
+        <Label id="buttonText" 
+        color="#ffffffff"
+        width="55"
+        height="55"
+        vertAlign = "center"
+        horizAlign="center"
+        />
+        </Rectangle> 
+  </children>
+</component>
+
+   

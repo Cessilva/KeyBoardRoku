@@ -5,7 +5,6 @@
 		<field id="widthComponent" type="integer" OnChange="sizeComponent"/>
         <field id="heightComponent" type="integer" />
         <field id="currentFocus" type="integer"/>
-        <field id="tieneFocus" type="boolean"/>
 </interface>
 <children>
     <LayoutGroup id="LayoutGroup" layoutDirection="horiz" addItemSpacingAfterChild="true" itemSpacings="[10,120,10]">

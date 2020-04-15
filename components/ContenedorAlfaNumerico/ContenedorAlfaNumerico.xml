@@ -2,11 +2,15 @@
 <component name = "ContenedorAlfaNumerico" extends = "Group" >
 <script type="text/brightscript" uri="pkg:/components/ContenedorAlfaNumerico/ContenedorAlfaNumerico.brs" />
 <interface>
+        <field id="widthComponent" type="integer" alias="myRectangle.width" OnChange="sizeComponent"/>
+        <!-- Este es el que dice cual escogio -->
         <field id="elementFocused" type="integer" OnChange="OnFocusedChild"/>
         <field id="contenido" type ="string"/>
 </interface>
 <children>
-    <Numerico id="myNumerico"  translation="[0,150]"/>
-    <Abecedario id="myAbecedario"  translation="[0,150]"/>
+<Rectangle id="myRectangle" >
+        <Abecedario id="myAbecedario"  translation="[0,150]"/>
+        <Numerico id="myNumerico"  translation="[0,150]"/>
+</Rectangle>
 </children>
 </component>

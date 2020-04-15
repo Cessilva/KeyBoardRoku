@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "AbecedarioAnexo" extends = "Group" >
+<script type="text/brightscript" uri="pkg:/components/AbecedarioAnexo/AbecedarioAnexo.brs" />
+<interface>
+    <field id="letra" type="string" />
+    <field id="currentFocus" type="integer"/>
+</interface>
+<children>
+    <LayoutGroup id="LayoutGroupCorreo" layoutDirection="horiz" translation="[0,190]" addItemSpacingAfterChild="true" itemSpacings="[30]">
+        <CButton id="com" text=".com" textSize="20" frameWidth="100" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000" />
+        <CButton id="net" text=".net" textSize="20" frameWidth="100" frameHeight="35" leftCentred="false"  frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000"/>
+        <CButton id="gmail" text="@gmail.com" textSize="20" frameWidth="130" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000"/>
+        <CButton id="hotmail" text="@hotmail.com" textSize="20" frameWidth="150" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000" />
+    </LayoutGroup>
+    <LayoutGroup id="LayoutGroupCaracteres" layoutDirection="horiz" translation="[100,230]" addItemSpacingAfterChild="true" itemSpacings="[15]">
+        <CButton id="guion_bajo" text="__" textSize="20" frameWidth="50" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000" />
+        <CButton id="guion_medio" text="-" textSize="30" frameWidth="50" frameHeight="35" leftCentred="false"  frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000"/>
+        <CButton id="espacio" text="|______|" textSize="10" frameWidth="100" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000"/>
+        <CButton id="punto" text="." textSize="30" frameWidth="50" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000" />
+        <CButton id="mas" text="+" textSize="30" frameWidth="50" frameHeight="35" leftCentred="false" frameColor="#000000" focusColorOriginal="#000000" bgColor="#000000" />
+    </LayoutGroup>
+</children>
+</component>
