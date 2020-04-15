@@ -15,6 +15,19 @@ function init()
     m.top.contenido=m.myAbecedario.letra
   end sub
 
+  sub OnChange()
+  print "Quiero el focus"
+  if m.top.quieroFocus then
+    if m.top.elementFocused=0 then
+      m.myAbecedario.setFocus(true)
+    else if m.top.elementFocused=1 then
+      m.myNumerico.setFocus(true)
+    end if 
+  else 
+  print "Noquiero el focus"
+  end if 
+  end sub 
+
   sub OnFocusedChild()
    ?"Eligieron un teclado, estoy en cotenedor alfanumerico"
   if m.top.elementFocused=0 then

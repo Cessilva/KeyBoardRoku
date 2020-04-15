@@ -17,7 +17,7 @@ sub showcontent()
 end sub
 
 sub onFocusChange()
-    ?"onFocusChange"
+    ?"onFocusChangeBotonLetraMayuscula"
     if m.top.itemHasFocus then
         m.frame.color = "#77b3d9"
     else

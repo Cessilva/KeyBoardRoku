@@ -19,6 +19,6 @@
     itemSize="[600,65]" 
     itemComponentName="BotonLetra"
     numRows="3" />
-    <AbecedarioAnexo id="AbecedarioAnexo"/>
+    <!-- <AbecedarioAnexo id="AbecedarioAnexo"/> -->
 </children>
 </component>

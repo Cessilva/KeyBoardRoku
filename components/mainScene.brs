@@ -50,13 +50,16 @@
         end if
     else if (key = "down" ) then
         if m.teclados.isInFocusChain() then
-        ? "Voy a Numerico"
+        ? "Voy a AlfaNumericoNumerico"
           m.myContenedorAlfaNumerico.setFocus(true)
-        end if 
+          m.myContenedorAlfaNumerico.quieroFocus=true
+        end if
+        
     else if (key = "up" ) then
         if m.myContenedorAlfaNumerico.isInFocusChain() then
         ? "Voy a teclados despues de haber ido a numerico"
           m.teclados.setFocus(true)
+          m.myContenedorAlfaNumerico.quieroFocus=false
         end if     
     end if
   end if

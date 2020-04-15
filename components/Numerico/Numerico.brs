@@ -65,7 +65,7 @@ function init()
 end function
 
 sub OnFocusedChildChange()
-    ? "[GridScreen] >> OnFocusedChildChange"
+    ? "[GridScreen] >> OnFocusedChildChangeNumerico"
     if m.top.isInFocusChain() and not m.myRowList.hasFocus() then
         m.myRowList.setFocus(true)
     end if

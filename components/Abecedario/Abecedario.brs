@@ -142,7 +142,7 @@ function init()
     m.top.observeField("focusedChild","OnFocusedChildChange")
 end function
 sub OnFocusedChildChange()
-    ? "[GridScreen] >> OnFocusedChildChange"
+    ? "[GridScreen] >> OnFocusedChildChangeAbecedario"
     if m.top.isInFocusChain() and not m.myRowList.hasFocus() then
         m.myRowList.setFocus(true)
     end if
@@ -184,7 +184,7 @@ end function
             m.top.letra=m.top.focusedContent.title
        end if 
     else if(key = "down" ) then
-        m.AbecedarioAnexo.setFocus(true)
+        'm.AbecedarioAnexo.setFocus(true)
     end if
   end if
   return handled
