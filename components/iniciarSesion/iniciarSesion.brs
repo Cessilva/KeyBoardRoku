@@ -33,7 +33,7 @@ end sub
 
 sub cambiaContenidoInput()
     if (m.myInput.text="  Correo Electronico" or m.top.contentInput="vaciar") then
-        m.myInput.text=""
+        m.myInput.text="  "
     else if m.top.contentInput="borrar" then
     size=len(m.myInput.text)
     m.myInput.text=Left(m.myInput.text,size-1)

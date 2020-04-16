@@ -22,27 +22,23 @@ end sub
 function onKeyEvent(key as String, press as Boolean) as Boolean
 handled = false
 if (not press) then
-if (key = "OK" ) then
-        print "hola"
-' else  if key = "left" then
-'     if m.LayoutGroupCorreo.isInFocusChain()then
-'        ?"izquierda"
-'         if m.top.currentFocus <> 0 then
-'             m.focusArray[m.top.currentFocus].focused = false
-'             m.top.currentFocus --
-'             m.focusArray[m.top.currentFocus].focused = true
-'         end if
-'     end if
-'     else if key = "right" then
-'     if m.LayoutGroupCorreo.isInFocusChain()then
-'     ?"derecha"
-'         if m.top.currentFocus <> 3 then
-'             m.focusArray[m.top.currentFocus].focused = false
-'             m.top.currentFocus ++
-'             m.focusArray[m.top.currentFocus].focused = true
-'         end if
-'     end if
-end if
+    if (key = "OK" ) then
+            print "hola"
+    else  if (key = "left") then
+        ?"izquierda"
+            if m.top.currentFocus <> 0 then
+                m.focusArray[m.top.currentFocus].focused = false
+                m.top.currentFocus --
+                m.focusArray[m.top.currentFocus].focused = true
+            end if
+        else if key = "right" then
+        ?"derecha"
+            if m.top.currentFocus <> 3 then
+                m.focusArray[m.top.currentFocus].focused = false
+                m.top.currentFocus ++
+                m.focusArray[m.top.currentFocus].focused = true
+            end if
+    end if
 end if
 return handled
 end function

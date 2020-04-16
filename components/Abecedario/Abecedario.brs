@@ -1,5 +1,9 @@
 function init()
     m.myRowList=m.top.findNode("myRowList")
+    m.myRowList2=m.top.findNode("myRowList2")
+    m.myRowList.visible=true
+    m.myRowList2.visible=false
+    m.mayuscula=0
     m.AbecedarioAnexo=m.top.findNode("AbecedarioAnexo")
     qp=[
       {Title:"q"
@@ -141,6 +145,28 @@ function init()
       SDPosterUrl:"pkg:/images/transparente.png"
       }
       ]
+    gm=[
+      {Title:"___"
+      TitleSeason:"___"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:"--"
+      TitleSeason:"--"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:"|___|"
+      TitleSeason:"|___|"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:"."
+      TitleSeason:"."
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      {Title:"+"
+      TitleSeason:"+"
+      SDPosterUrl:"pkg:/images/transparente.png"
+      }
+      ]
     lista= [
         {
             Title: "De Q a P"
@@ -154,26 +180,32 @@ function init()
             Title: "Mayus a @"
             ContentList: ma
         }
-        {
-            Title: "Com a hotmail"
-            ContentList: ch
-        }
+        ' {
+        '     Title: "Com a hotmail"
+        '     ContentList: ch
+        ' }
+        ' {
+        '     Title: "Los otros"
+        '     ContentList: gm
+        ' }
 
     ]
     content = parseContent(lista)
     m.myRowList.content= content
+    m.myRowList2.content=content
     m.top.observeField("focusedChild","OnFocusedChildChange")
 end function
+
 sub OnFocusedChildChange()
     ? "[GridScreen] >> OnFocusedChildChangeAbecedario"
-    if m.top.isInFocusChain() and not m.myRowList.hasFocus() then
+    if m.top.isInFocusChain() and not m.myRowList.hasFocus()  then
         m.myRowList.setFocus(true)
     end if
 end sub
 
 sub OnItemFocused()
     itemFocused = m.top.itemFocused
-    'print m.myRowList.content.getChild(itemFocused[0]).getChild(itemFocused[1])
+    m.top.titulo= m.myRowList.content.getChild(itemFocused[0]).title
     if itemFocused.count() = 2 then
         focusedContent = m.myRowList.content.getChild(itemFocused[0]).getChild(itemFocused[1])
         if focusedContent <> invalid then
@@ -202,21 +234,29 @@ end function
   if (not press) then
     if (key = "OK" ) then
         if m.top.focusedContent.title="may" then
-          m.top.focusedContent.title=m.top.focusedContent.TitleSeason
-          m.myRowList.itemComponentName="BotonLetraMayus"
+            m.mayuscula++
+            if (m.mayuscula MOD 2 = 1) then 
+                m.myRowList2.visible=true
+                m.myRowList.visible=true
+            else
+            m.myRowList2.visible=false
+            m.myRowList.visible=true
+            end if 
+        else if m.myRowList2.visible=true then
+             m.top.letra=m.top.focusedContent.titleSeason
         else
             m.top.letra=m.top.focusedContent.title
        end if 
-    ' else if(key = "down" ) then
-
-    '         m.AbecedarioAnexo.setFocus(true)
-    '         print "Voy al abecedario"
-
-    ' else if(key = "up" ) then
-    '     if m.AbecedarioAnexo.hasFocus() then
-    '         m.myRowList.setFocus(true)
-    '         print "entre aqui"
-    '     end if
+    else if (key = "down" ) then
+        if m.top.titulo="Mayus a @" then
+            m.AbecedarioAnexo.setFocus(true)
+            return true
+        end if
+    else if (key="up") then 
+        if m.AbecedarioAnexo.isInFocusChain()then
+        print "achis achis" 
+        m.myRowList.setFocus(true)
+        endif
 end if
   end if
   return handled

@@ -2,11 +2,18 @@
 <component name = "Abecedario" extends = "Group" >
 <script type="text/brightscript" uri="pkg:/components/Abecedario/Abecedario.brs" />
 <interface>
+<!-- Rowlist 1 -->
     <field alias="myRowList.rowItemSelected" type="intarray" id="rowItemSelected" alwaysnotify="true"/>
     <field onChange="OnItemFocused" alwaysnotify="true" alias="myRowList.rowItemFocused" type="intarray" id="itemFocused"/>
     <field alias="myRowList.rowItemSize" type="intarray" id="rowItemSize" alwaysnotify="true"/>
+    <!-- Rowlist 2 -->
+    <field onChange="OnItemFocused2" alwaysnotify="true" alias="myRowList2.rowItemFocused" type="intarray" id="itemFocused2"/>
+    <field alias="myRowList2.rowItemSelected" type="intarray" id="rowItemSelected2" alwaysnotify="true"/>
+    <field alias="myRowList2.rowItemSize" type="intarray" id="rowItemSize2" alwaysnotify="true"/>
+
     <field id="letra" type="string" alwaysnotify="true" />
     <field type="node" id="focusedContent"/>
+    <field type="string" id="titulo" alwaysnotify="true"/>
 </interface>
 <children>
     <RowList id="myRowList" 
@@ -18,6 +25,16 @@
     rowItemSize="[[55.5, 55.5],[55.5, 55.5],[55.5, 55.5],[130,55.5]]" 
     itemSize="[600,65]" 
     itemComponentName="BotonLetra"
+    numRows="3" />
+    <RowList id="myRowList2" 
+    rowFocusAnimationStyle="floatingFocus" 
+    vertFocusAnimationStyle="floatingFocus" 
+    drawFocusFeedback="false" 
+    rowItemSpacing="[[5,0],[5,0],[12,0],[13,0]]" 
+    showRowLabel="[false ]" 
+    rowItemSize="[[55,55.5],[55.5, 55.5],[55.5, 55.5],[130,55.5]]" 
+    itemSize="[600,65]" 
+    itemComponentName="BotonLetraMayus"
     numRows="3" />
     <AbecedarioAnexo id="AbecedarioAnexo"/>
 </children>
