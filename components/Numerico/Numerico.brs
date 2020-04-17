@@ -101,12 +101,10 @@ end function
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
-  print "soy el press de Numerico"
   print press
   if (not press) then
     if (key = "OK" ) then
         ?"Estoy en el ok de teclado numerico "
-       
        if m.top.focusedContent.title="Borrar" then 
        m.top.numero="borrar"
        else

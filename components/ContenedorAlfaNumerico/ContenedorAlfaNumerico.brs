@@ -18,15 +18,12 @@ function init()
   end sub
 
   sub OnChange()
-  print "Quiero el focus"
   if m.top.quieroFocus then
     if m.top.elementFocused=0 then
       m.myAbecedario.setFocus(true)
     else if m.top.elementFocused=1 then
       m.myNumerico.setFocus(true)
     end if 
-  else 
-  print "No quiero el focus"
   end if 
   end sub 
 
