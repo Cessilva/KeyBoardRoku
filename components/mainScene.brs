@@ -25,6 +25,7 @@
     m.teclados.observeField("botonEscogido", "ButtonSelected")
     'm.myContenedorAlfaNumerico.observeField("contenido", "actualizaContenido")
     m.AbecedarioAnexo.observeField("caracter","actualizaContenidoContenedorAlfaNumerico")
+    m.myContenedorAlfaNumerico.observeField("abc","visible")
     m.iniciarSesion.setFocus(true)
   end function
 'Establece el teclado numerico o alfabetico
@@ -43,6 +44,9 @@ end sub
     print m.iniciarSesion.contentInput
   end sub 
 
+sub visible()
+m.AbecedarioAnexo.visible=m.myContenedorAlfaNumerico.abc
+end sub 
 
   function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false

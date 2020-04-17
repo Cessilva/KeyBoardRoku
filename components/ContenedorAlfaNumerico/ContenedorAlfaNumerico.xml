@@ -6,6 +6,7 @@
         <!-- Este es el que dice cual escogio -->
         <field id="elementFocused" type="integer" alwaysNotify="true" OnChange="OnFocusedChild"/>
         <field id="contenido"  type ="string" alwaysNotify="true"/>
+        <field id="abc" type ="boolean" alwaysNotify="true"/>
         <field id="quieroFocus" type ="boolean" OnChange="OnChange"/>
 </interface>
 <children>

@@ -35,10 +35,12 @@ function init()
   if m.top.elementFocused=0 then
     m.myNumerico.visible=false
     m.myAbecedario.visible=true
+    m.top.abc=true
     m.myAbecedario.setFocus(true)
   else if m.top.elementFocused=1 then
     m.myNumerico.visible=true
     m.myAbecedario.visible=false
+    m.top.abc=false
     m.myNumerico.setFocus(true)
   else if m.top.elementFocused=2 then
       m.top.contenido="borrar"
