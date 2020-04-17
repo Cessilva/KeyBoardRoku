@@ -5,16 +5,25 @@ sub init()
     m.mainRectangle = m.top.findNode("mainRectangle")
     m.frame = m.top.findNode("frame")
     m.bg = m.top.findNode("bg")
+
     centery = (m.frame.height-m.buttonIcon.height) / 2
     centerx = (m.frame.width-m.buttonIcon.width) / 2
-    m.buttonIcon.translation = [centerx, centery]
+    m.buttonIcon.translation = [centerx+25, centery]
 end sub
 
 sub showcontent()
   itemcontent = m.top.itemContent
+  if itemcontent.title="Borrar" then
   m.buttonIcon.uri = itemcontent.SDPosterUrl
   m.buttonText.text= itemcontent.title
+  m.buttonText.visible=false
+  else
+  m.buttonIcon.uri = itemcontent.SDPosterUrl
+  m.buttonText.text= itemcontent.title
+  m.buttonText.visible=true
+  end if
 end sub
+
 sub onWidthChange()
   width = m.top.width
   m.buttonText.width= width

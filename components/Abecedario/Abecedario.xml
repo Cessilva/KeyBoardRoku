@@ -35,7 +35,7 @@
     rowItemSize="[[55,55.5],[55.5, 55.5],[55.5, 55.5],[130,55.5]]" 
     itemSize="[600,65]" 
     itemComponentName="BotonLetraMayus"
-    numRows="4" />
+    numRows="3" />
     
 </children>
 </component>

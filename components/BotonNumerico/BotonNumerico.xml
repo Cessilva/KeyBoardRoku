@@ -28,8 +28,9 @@
         </Rectangle> 
         <Poster 
         id="buttonIcon"
-        width="60"
-        height="40" />
+        width="50"
+        height="50" />
+        
         <Label id="buttonText" 
         color="#ffffffff"
         width="110"

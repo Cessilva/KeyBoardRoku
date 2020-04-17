@@ -1,6 +1,7 @@
 sub init()
     m.mainRectangle = m.top.findNode("mainRectangle")
     m.buttonText = m.top.findNode("buttonText")
+    m.buttonIcon = m.top.findNode("buttonIcon")
     m.frame = m.top.findNode("frame")
     m.bg = m.top.findNode("bg")
 
@@ -33,6 +34,7 @@ else
     m.buttonText.horizAlign="center"
 endif 
 end sub
+
 
 sub onButtonSizeChange()
     m.buttonText.font.size = m.top.textSize

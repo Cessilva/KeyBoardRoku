@@ -10,7 +10,9 @@
         <field id="textSize" type="integer" alwaysNotify="true" value="16" onChange="onButtonSizeChange" />
         <field id="focused" type="boolean" alwaysNotify="true" onChange="onFocusChange" />
         <field id="leftCentred" type="boolean" alwaysNotify="true" value="true" onChange="onCentredChange"/>
-
+        <field alias="buttonIcon.uri" type="string" id="iconUri" alwaysNotify="true"/>
+        <field alias="buttonIcon.height" type="float" id="iconHeight" onChange="onButtonIconChange" alwaysNotify="true"/>
+        <field alias="buttonIcon.width" type="float" id="iconWidth" onChange="onButtonIconChange" alwaysNotify="true"/>
 
     </interface>
 
@@ -21,6 +23,7 @@
             <Rectangle id="frame"  visible="true">
                 <Rectangle id="bg" translation="[3,3]" />
             </Rectangle>
+            <Poster id="buttonIcon"/>
             <Label id="buttonText"  color="#ffffffff" vertAlign="center" />
         </Rectangle>
     </children>

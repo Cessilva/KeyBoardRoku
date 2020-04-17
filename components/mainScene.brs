@@ -28,15 +28,18 @@
     m.myContenedorAlfaNumerico.observeField("abc","visible")
     m.iniciarSesion.setFocus(true)
   end function
+  
 'Establece el teclado numerico o alfabetico
   sub ButtonSelected()
     m.myContenedorAlfaNumerico.elementFocused=m.teclados.botonEscogido
     print"soY EL BOTON ESCOGIDO EN EN EL MAIN"
     PRINT m.myContenedorAlfaNumerico.elementFocused
   end sub 
+
 sub actualizaContenidoContenedorAlfaNumerico()
 m.myContenedorAlfaNumerico.contenido=m.AbecedarioAnexo.caracter
 end sub
+
 'Rellena el input de iniciarSesion
   sub actualizaContenido()
     m.iniciarSesion.contentInput=m.myContenedorAlfaNumerico.contenido
