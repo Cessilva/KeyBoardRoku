@@ -25,7 +25,7 @@
     rowItemSize="[[55.5, 55.5],[55.5, 55.5],[55.5, 55.5],[130,55.5]]" 
     itemSize="[600,65]" 
     itemComponentName="BotonLetra"
-    numRows="3" />
+    numRows="4" />
     <RowList id="myRowList2" 
     rowFocusAnimationStyle="floatingFocus" 
     vertFocusAnimationStyle="floatingFocus" 
@@ -35,7 +35,7 @@
     rowItemSize="[[55,55.5],[55.5, 55.5],[55.5, 55.5],[130,55.5]]" 
     itemSize="[600,65]" 
     itemComponentName="BotonLetraMayus"
-    numRows="3" />
-    <AbecedarioAnexo id="AbecedarioAnexo"/>
+    numRows="4" />
+    
 </children>
 </component>

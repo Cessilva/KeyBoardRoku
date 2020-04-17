@@ -1,6 +1,7 @@
 function init()
     m.myNumerico=m.top.findNode("myNumerico")
     m.myAbecedario=m.top.findNode("myAbecedario")
+    'm.AbecedarioAnexo=m.top.findNode("AbecedarioAnexo")
     m.myNumerico.visible=false
     m.myAbecedario.visible=true
 
@@ -25,7 +26,7 @@ function init()
       m.myNumerico.setFocus(true)
     end if 
   else 
-  print "Noquiero el focus"
+  print "No quiero el focus"
   end if 
   end sub 
 
@@ -35,7 +36,6 @@ function init()
     m.myNumerico.visible=false
     m.myAbecedario.visible=true
     m.myAbecedario.setFocus(true)
-    'm.myAbecedario.widthAbecedario=m.top.widthComponent
   else if m.top.elementFocused=1 then
     m.myNumerico.visible=true
     m.myAbecedario.visible=false
@@ -46,3 +46,22 @@ function init()
       m.top.contenido="vaciar"
   end if 
   end sub
+
+
+' function onKeyEvent(key as String, press as Boolean) as Boolean
+'   handled = false
+'   if (not press) then
+'     if (key = "OK" ) then
+        
+'     else if (key = "down" ) then
+'     ?"aqui"
+'         if m.myAbecedario.hasFocus() then
+
+'         m.AbecedarioAnexo.setFocus(true)
+'         end if
+'     else if (key="up") then 
+
+' end if
+'   end if
+'   return handled
+' end function

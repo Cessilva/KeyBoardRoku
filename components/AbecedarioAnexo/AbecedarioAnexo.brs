@@ -7,7 +7,15 @@ function init()
     m.net=m.top.findNode("net")
     m.gmail=m.top.findNode("gmail")
     m.hotmail=m.top.findNode("hotmail")
-    m.focusArray = [m.com,m.net, m.gmail, m.hotmail]
+
+    m.guion_bajo=m.top.findNode("guion_bajo")
+    m.guion_medio=m.top.findNode("guion_medio")
+    m.espacio=m.top.findNode("espacio")
+    m.punto=m.top.findNode("punto")
+    m.mas=m.top.findNode("mas")
+
+    'm.focusArray = [m.com,m.net, m.gmail, m.hotmail]
+    m.focusArray=[m.guion_bajo,m.guion_medio,m.espacio,m.punto,m.mas]
     m.top.currentFocus = 0
 end function
 
@@ -23,9 +31,18 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
 handled = false
 if (not press) then
     if (key = "OK" ) then
-            print "hola"
+         if m.top.currentFocus=0 then 
+            m.top.caracter="_"
+        else if m.top.currentFocus=1 then
+            m.top.caracter="-"
+        else if m.top.currentFocus=2 then
+            m.top.caracter=" "
+        else if m.top.currentFocus=3 then
+            m.top.caracter="."
+        else if m.top.currentFocus=4 then
+            m.top.caracter="+"
+        end if 
     else  if (key = "left") then
-        ?"izquierda"
             if m.top.currentFocus <> 0 then
                 m.focusArray[m.top.currentFocus].focused = false
                 m.top.currentFocus --
@@ -33,7 +50,7 @@ if (not press) then
             end if
         else if key = "right" then
         ?"derecha"
-            if m.top.currentFocus <> 3 then
+            if m.top.currentFocus <> 4 then
                 m.focusArray[m.top.currentFocus].focused = false
                 m.top.currentFocus ++
                 m.focusArray[m.top.currentFocus].focused = true

@@ -40,7 +40,7 @@ function init()
       SDPosterUrl:"pkg:/images/transparente.png"
       }
       {Title:"Borrar"
-      SDPosterUrl:"pkg:/images/transparente.png"
+      SDPosterUrl:"pkg:/images/cancelar.png"
       }
       ]
     lista= [

@@ -4,7 +4,7 @@ function init()
     m.myRowList.visible=true
     m.myRowList2.visible=false
     m.mayuscula=0
-    m.AbecedarioAnexo=m.top.findNode("AbecedarioAnexo")
+    'm.AbecedarioAnexo=m.top.findNode("AbecedarioAnexo")
     qp=[
       {Title:"q"
       TitleSeason:"Q"
@@ -180,10 +180,10 @@ function init()
             Title: "Mayus a @"
             ContentList: ma
         }
-        ' {
-        '     Title: "Com a hotmail"
-        '     ContentList: ch
-        ' }
+        {
+            Title: "Com a hotmail"
+            ContentList: ch
+        }
         ' {
         '     Title: "Los otros"
         '     ContentList: gm
@@ -247,16 +247,16 @@ end function
         else
             m.top.letra=m.top.focusedContent.title
        end if 
-    else if (key = "down" ) then
-        if m.top.titulo="Mayus a @" then
-            m.AbecedarioAnexo.setFocus(true)
-            return true
-        end if
-    else if (key="up") then 
-        if m.AbecedarioAnexo.isInFocusChain()then
-        print "achis achis" 
-        m.myRowList.setFocus(true)
-        endif
+    ' else if (key = "down" ) then
+    '     if m.top.titulo="Mayus a @" then
+    '         m.AbecedarioAnexo.setFocus(true)
+    '         return true
+    '     end if
+    ' else if (key="up") then 
+    '     if m.AbecedarioAnexo.isInFocusChain()then
+    '     print "achis achis" 
+    '     m.myRowList.setFocus(true)
+    '     endif
 end if
   end if
   return handled
